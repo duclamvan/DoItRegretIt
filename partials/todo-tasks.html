@@ -1,0 +1,13 @@
+<div class="todo-tasks" ng-controller="TaskController as taskCtrl">
+	<h2>Tasks</h2>
+	<!-- TODO: line through transition on hover -->
+	<ol class="task-list" ng-show="taskCtrl.tasks.length">
+		<li ng-repeat="task in taskCtrl.tasks" ng-show="task.status && !task.deleted"><span class="task-text" ng-click="taskCtrl.done(task)">{{task.name}}</span><span class="task-control"><i class="icon-done" ng-include="'images/tick.svg'" ng-click="taskCtrl.done(task)"></i><i class="icon-delete" ng-include="'images/x.svg'" ng-click="taskCtrl.deleteTask(task)"></i></span></li>
+	</ol>
+	<div ng-show="!taskCtrl.tasks.length" class="no-tasks">
+		<p>Seems like you still haven't got up off the couch.</p>
+	</div>
+	<div ng-show="taskCtrl.noneTaskDetect() && taskCtrl.tasks.length" class="no-tasks">
+		<p>You did well today!</p>
+	</div>
+</div>

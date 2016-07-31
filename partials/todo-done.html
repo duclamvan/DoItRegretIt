@@ -1,0 +1,9 @@
+<div class="todo-done" ng-controller="DoneTaskController as doneTaskCtrl">
+	<h2>Done</h2>
+	<ol class="task-list" ng-show="taskCtrl.tasks.length">
+		<li ng-repeat="task in doneTaskCtrl.tasks" ng-show="!task.status && !task.deleted"><span class="task-text" ng-click="doneTaskCtrl.undoTask(task)">{{task.name}}</span></li>
+	</ol>
+	<div ng-show="doneTaskCtrl.noneTaskDetect()" class="no-tasks">
+		<p>You did nothing!</p>
+	</div>
+</div>

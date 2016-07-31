@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDoListApp</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body ng-app="todo">
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div class="container">
+        <todo-header></todo-header>
+        
+        <todo-form></todo-form>
+        
+        <todo-tasks></todo-tasks>
+        
+        <todo-done></todo-done>
+        
+    </div>
+    
+    
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- <script src="../bower_components/angular/angular.min.js"></script> -->
+    <!-- <script src="../bower_components/jquery/dist/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/directives.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
